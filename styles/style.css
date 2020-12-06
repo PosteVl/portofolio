@@ -1,4 +1,9 @@
 /* Global Styles */
+:root {
+  --mainColor: #3F3D56;
+  --posteetColor:#b5975e;
+  --phoneColor: #000;
+}
 * {
   margin: 0;
   padding: 0;
@@ -309,7 +314,7 @@ nav ul {
           flex: 1 1 40rem;
 }
 
-.form-section {
+.contact-div {
   min-height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -327,7 +332,7 @@ nav ul {
   margin-top: 3rem;
 }
 
-.form-section form {
+.contact-div div {
   padding: 3rem 10rem;
   -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 20px 40px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 20px 40px rgba(0, 0, 0, 0.2);
@@ -347,30 +352,68 @@ nav ul {
   border-radius: 2rem;
 }
 
-.form-section form input,
-.form-section form textarea {
-  margin: 2rem;
+/*=============================================== anchor tags styling ===================================================*/
+#popout-a {
+  color: var(--mainColor);
+  text-decoration: none;
 }
 
-.form-section form input:focus,
-.form-section form textarea:focus {
-  outline: 2px solid black;
+#popout-a:hover {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--mainColor);
 }
 
-.form-section form textarea {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+@supports not(-webkit-text-stroke: 2px red) {
+  #popout-a:hover {
+    text-shadow:
+      3px 3px 0 var(--mainColor),
+      -1px -1px 0 var(--mainColor),
+      1px -1px 0 var(--mainColor),
+      -1px 1px 0 var(--mainColor),
+      1px 1px 0 var(--mainColor);
+  }
 }
 
-.form-section form button {
-  width: 100%;
-  padding: 2rem;
-  background: #3F3D56;
-  color: white;
+#popout-a-posteet {
+  color: var(--posteetColor);
+  text-decoration: none;
 }
 
-.form-section form button:focus {
-  background: #3F3D56;
+#popout-a-posteet:hover {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--posteetColor);
+}
+
+@supports not(-webkit-text-stroke: 2px red) {
+  #popout-a-posteet:hover {
+    text-shadow:
+      3px 3px 0 var(--posteetColor),
+      -1px -1px 0 var(--posteetColor),
+      1px -1px 0 var(--posteetColor),
+      -1px 1px 0 var(--posteetColor),
+      1px 1px 0 var(--posteetColor);
+  }
+}
+
+#popout-a-phone {
+  color: var(--phoneColor);
+  text-decoration: none;
+}
+
+#popout-a-phone:hover {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--phoneColor);
+}
+
+@supports not(-webkit-text-stroke: 2px red) {
+  #popout-a-phone:hover {
+    text-shadow:
+      3px 3px 0 var(--phoneColor),
+      -1px -1px 0 var(--phoneColor),
+      1px -1px 0 var(--phoneColor),
+      -1px 1px 0 var(--phoneColor),
+      1px 1px 0 var(--phoneColor);
+  }
 }
 
 footer {
